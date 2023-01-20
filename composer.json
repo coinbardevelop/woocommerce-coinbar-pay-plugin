@@ -1,0 +1,30 @@
+{
+    "name": "coinbar/coinbar-pay-woocommerce-plg",
+    "description": "WooCommerce Plug-in for CoinbarPay",
+    "type": "library",
+    "version": "1.0.0",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "CoinbarPay\\Woo\\": "src/CoinbarPay/Woo/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Coinbar s.p.a.",
+            "email": "business@coinbar.io"
+        },{
+            "name": "Adamantic Development Team",
+            "email": "dev@adamantic.io"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-json": "*",
+        "coinbar/coinbar-pay-php-sdk": "^1.0.0"
+    },
+    "repositories": [
+        { "type": "vcs", "url": "https://github.com/adamantic-io/coinbar-pay-php-sdk" },
+        { "type": "vcs", "url": "https://github.com/adamantic-io/crypto-payments-php" }
+    ]
+}
