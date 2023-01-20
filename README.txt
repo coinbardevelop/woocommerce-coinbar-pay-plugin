@@ -20,6 +20,8 @@ With Coinbar Pay, merchants can expand their payment options and attract a wider
 
 For more informations please go https://coinbar.io
 
+Plugins source : https://github.com/coinbardevelop/woocommerce-coinbar-pay
+
 A few notes about the sections above:
 
 * "Contributors" is a comma separated list of wordpress.org usernames
