@@ -1,6 +1,7 @@
 === CoinbarPay Payment Gateway ===
 Plugin name : woocommerce-coinbar-pay
-Contributors: coinbarspa, adamantic-io
+Donate link: https://coinbar.io/
+Contributors: coinbarspa
 Tags: Payment Gateway, Woocommerce, Payment method, Crypto Payments, Crypto-Fiat Payments
 Requires at least: 6.0
 Tested up to: 6.1
@@ -47,14 +48,20 @@ Using coinbar account wallet is free and does not have a payment fee.
 
 == Frequently Asked Questions ==
 
+= Where to find more informations ?
 Please visit https://coinbar.io or https://pay.coinbar.io for FAQ pages.
 
 == Screenshots ==
 
-Watch example screens in https://pay.coinbar.io
+1. Watch example screens in https://pay.coinbar.io
 
 == Changelog ==
 
 = 1.0 =
 * Initial Release.
+
+== Upgrade Notice ==
+
+= 1.0 =
+Initial stable release.
 

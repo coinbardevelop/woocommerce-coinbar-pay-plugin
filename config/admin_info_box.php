@@ -26,16 +26,16 @@
     <div class="inside">
         <a href="https://coinbar.io"><img src="https://coinbar.io/static/media/logo-coinbar-hor.f21a28f5c91c26c050be7456c3fc6cb2.svg" width="200px"/></a>
         <div>    
-            <?= __('<h1>How to activate <b>Coinbar</b><span style="color:lightblue">Pay</span></h1>
+            <h1>How to activate <b>Coinbar</b><span style="color:lightblue">Pay</span></h1>
                 <ol>
-                    <li>Sign up to <a target=\'_blank\' href="https://trade.coinbar.io/signup/">Coinbar website</a> by filling out the required information and creating an account.</li>
+                    <li>Sign up to <a target='_blank' href="https://trade.coinbar.io/signup/">Coinbar website</a> by filling out the required information and creating an account.</li>
                     <li>Apply for Know Your Customer (KYC) verification as Business Account. This is a standard process for businesses that handle financial transactions and is used to ensure compliance with regulations and prevent fraud.</li>
                     <li>Once your account is activated, log in to the Coinbar business panel and activate CoinbarPay by clicking on the appropriate button or link.</li>
                     <li>Set up the configuration by following the instructions provided on the activation panel. This will include setting up service keys and preferences.</li>
                     <li>After completing these steps, your CoinbarPay plugin will be ready to accept payments. </li>
                 </ol>
 
-                <p>Please note that you may need to follow additional steps as per the regulatory requirement in your region, and it\'s always a good idea to consult <a href="https://coinbar.io/b2b">customer support</a> for any additional information.</p>', 'woocommerce-coinbar-pay') ?> 
+                <p>Please note that you may need to follow additional steps as per the regulatory requirement in your region, and it\'s always a good idea to consult <a href="https://pay.coinbar.io">customer support</a> for any additional information.</p>
         </div>
     </div> <!-- .inside -->        
 </div> <!-- .postbox -->

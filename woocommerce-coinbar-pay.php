@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: CoinbarPay Payment Gateway
- * Plugin URI: https://github.com/adamantic-io/coinbar-pay-woocommerce-plg
+ * Plugin URI: https://github.com/coinbardevelop/woocommerce-coinbar-pay-plugin
  * Description: Pay with Cryptocurrencies using the CoinbarPay gateway
  * Author: Coinbar s.p.a., Adamantic Team
  * Author URI: https://www.coinbar.io
