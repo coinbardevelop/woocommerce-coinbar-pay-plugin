@@ -39,12 +39,27 @@ For more informations about the service fees and available promotions check out 
 Using own private wallet will means the fees are calculated by the coin blockchain and may changes very often. 
 Using coinbar account wallet is free and does not have a payment fee.
 
-==LINKS==
+== Dependencies ==
+
+This plugin uses some dependencies as :
+ - Adamantic cypto payment library
+ - Coinbar Pay PHP Plugins SDK
+ - Brick Math
+ - Graham-Campbell result-type
+ - Phpoption
+ - Symfony
+ - Vlucas phpdotenv
+
+== Development Credits==
+This plugin was developed by Adamantic.io Developer Team.
+https://github.com/adamantic-io
+
+== Links ==
 - Coinbar Pay homepage : https://pay.coinbar.io
 - For more informations about Coinbar company, please go https://coinbar.io
 - Plugins source : https://github.com/coinbardevelop/woocommerce-coinbar-pay-plugin
+- Developers Team : https://github.com/adamantic-io
 - Detailed documentation is avaialble in github plugin source or requesting support at business@coinbar.io
-- 
 
 == Frequently Asked Questions ==
 
