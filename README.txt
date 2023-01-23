@@ -22,7 +22,18 @@ It allows merchants to accept a wide range of popular cryptocurrencies including
 With Coinbar Pay, merchants can expand their payment options and attract a wider customer base by catering to the growing demand for crypto payments.
 
 
-== Getting started
+= CoinbarPay Service activation =
+
+1. Visit the Coinbar website and click on the "Business" button to register as a business account.
+2. Fill in the registration form with your business information and create a password for your account.
+3. Verify your email address by clicking on the link sent to your email.
+4. Once logged in, navigate to the "KYC Verification" section and upload the necessary documents for verification (Company registration, ID, etc).
+5. Wait for the verification process to be completed. It can take up to a few days depending on the verification load.
+6. Once your account is verified, navigate to the "Services" section and activate the Coinbar Pay service.
+7. Obtain your API key and secret key by navigating to the "API" section and generate it.
+8. Use the obtained keys in the Coinbar Pay plugin settings to complete the integration.
+
+= Plugin Install =
 
 1. Install the plugin through the WordPress plugin directory or by uploading the files to your server.
 2. Activate the plugin through the "Plugins" menu in WordPress.
@@ -32,43 +43,69 @@ With Coinbar Pay, merchants can expand their payment options and attract a wider
 6. Save changes and start accepting crypto payments on your website.
 
 
-== Shop Customer features 
+= Available Payment Methods =
 The CoinbarPay Payment Gateway plugin allows for both on-chain and off-chain types of payments. This means that users have the option to use their private wallet or the Coinbar wallet for transactions.
-
 The Coinbar wallet is an account on the Coinbar Exchange Platform that allows users to hold, trade, deposit, withdraw, and pay with their preferred coin.
-
 When using a private wallet, after the checkout process, the user is prompted to confirm the final payment price, choose a cryptocurrency to pay with, and confirm the payment request. This generates a QR code for the user to scan and use their private wallet as the payment source.
-
 When using the Coinbar Wallet, the user will need to log in to the system and use funds that have been previously deposited.
 
-== Plugin Service Fees
+= Available Countries =
+Service can be applied to the following services :
+* Austria
+* Belgium
+* Bulgaria
+* Czech Republic
+* Denmark
+* Finland
+* France
+* Germany
+* Greece
+* Ireland
+* Italy
+* Malta
+* Netherlands
+* Norway
+* Poland
+* Portugal
+* Slovakia
+* Slovenia
+* Spain
+* Sweden
+* Switzerland
+* United Kingdom
+.. and more will be added.
+
+
+= Plugin service fees =
 For more informations about the service fees and available promotions check out to https://pay.coinbar.io/
 
-== Shop Customer fees
-Using own private wallet will means the fees are calculated by the coin blockchain and may changes very often. 
-Using coinbar account wallet is free and does not have a payment fee.
+= User Customer fees =
+* Using own private wallet will means the fees are calculated by the coin blockchain and may changes very often. 
+* Using coinbar account wallet is free and does not have a payment fee.
 
 == Dependencies ==
 
 This plugin uses some dependencies as :
- - Adamantic cypto payment library
- - Coinbar Pay PHP Plugins SDK
- - Brick Math
- - Graham-Campbell result-type
- - Phpoption
- - Symfony
- - Vlucas phpdotenv
+ * Adamantic cypto payment library
+ * Coinbar Pay PHP Plugins SDK
+ * Brick Math
+ * Graham-Campbell result-type
+ * Phpoption
+ * Symfony
+ * Vlucas phpdotenv
 
 == Development Credits==
+
 This plugin was developed by Adamantic.io Developer Team.
 https://github.com/adamantic-io
 
 == Links ==
-- Coinbar Pay homepage : https://pay.coinbar.io
-- For more informations about Coinbar company, please go https://coinbar.io
-- Plugins source : https://github.com/coinbardevelop/woocommerce-coinbar-pay-plugin
-- Developers Team : https://github.com/adamantic-io
-- Detailed documentation is avaialble in github plugin source or requesting support at business@coinbar.io
+
+* Coinbar Pay homepage : https://pay.coinbar.io
+* For more informations about Coinbar company, please go https://coinbar.io
+* Plugins source : https://github.com/coinbardevelop/woocommerce-coinbar-pay-plugin
+* Developers Team : https://github.com/adamantic-io
+* Detailed documentation is avaialble in github plugin source or requesting support at business@coinbar.io
 
 == Frequently Asked Questions ==
 
@@ -89,7 +126,7 @@ Please visit https://coinbar.io or https://pay.coinbar.io for FAQ pages.
 = 1.0 =
 Initial stable release.
 
-## Support
+=== Support ===
 
 For support, please visit the [Coinbar Pay website](https://coinbar.io/) or contact us at support@coinbar.io.
 
