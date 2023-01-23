@@ -1,6 +1,6 @@
 === CoinbarPay Payment Gateway ===
+Plugin name : woocommerce-coinbar-pay
 Contributors: coinbarspa, adamantic-io
-Donate link: https://coinbar.io
 Tags: Payment Gateway, Woocommerce, Payment method, Crypto Payments, Crypto-Fiat Payments
 Requires at least: 6.0
 Tested up to: 6.1
@@ -11,7 +11,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Coinbar Pay is a Woocommerce Payment Gateway plugin that allows online merchants to accept crypto payments on their website.
 
-# Description #
+=== Description ===
 
 Coinbar Pay is a Woocommerce Payment Gateway plugin that allows online merchants to accept crypto payments on their website. 
 The plugin is easy to install and integrates seamlessly with the Woocommerce platform. 
@@ -19,22 +19,22 @@ It allows merchants to accept a wide range of popular cryptocurrencies including
 With Coinbar Pay, merchants can expand their payment options and attract a wider customer base by catering to the growing demand for crypto payments.
 
 
-MERCHANT SHOP STEPS & FEATURES :
+# MERCHANT SHOP STEPS & FEATURES :
 To activate this plugin it's neeeded a Coinbar Business Account, that can be done on Coinbar home website : https://coinbar.io
 After the KYC process, it is possible to activate the payment service, that will grant access to this plugin using keys and ids as configuration in this plugin setup panel.
 With service activation will be allowed to receive crypto payments and choice to keep the coins or trade them instantly to euro/dollar fiat currency to not risk merchants incomes
 
-USERS SHOP CUSTOMERS STEPS & FEATURES
+# USERS SHOP CUSTOMERS STEPS & FEATURES
 The payment system works both on chain and off chain types of payemnts, allowing users to use their private wallet, or coinbar wallet.
 Coinbar wallet is an account in Coinbar Exchange Platform, that allow users to hold, trade, deposit, withdraw and pay with their preferred coin.
 Using the private wallet, after the checkout pages, user is requested to check the payment final price, choice a crypto coin to pay and to confirm the payment request to let
 the system to generate a QR code and display crypto payment details to scan and use user's private wallet as payment source.
 Using Coinbar Wallet the user will login in the system and use its funds previously deposited.
 
-MERCHANT SHOP FEES
+# MERCHANT SHOP FEES
 For more informations about the service fees and available promotions check out to https://pay.coinbar.io/
 
-USER CUSTOMER FEES
+# USER CUSTOMER FEES
 Using own private wallet will means the fees are calculated by the coin blockchain and may changes very often. 
 Using coinbar account wallet is free and does not have a payment fee.
 
@@ -47,22 +47,14 @@ Using coinbar account wallet is free and does not have a payment fee.
 
 == Frequently Asked Questions ==
 
-
+Please visit https://coinbar.io or https://pay.coinbar.io for FAQ pages.
 
 == Screenshots ==
+
+Watch example screens in https://pay.coinbar.io
 
 == Changelog ==
 
 = 1.0 =
 * Initial Release.
 
-== Upgrade Notice ==
-
-== A brief Markdown Example ==
-
-Markdown is what the parser uses to process much of the readme file.
-
-[markdown syntax]: https://daringfireball.net/projects/markdown/syntax
-
-
-`<?php code(); ?>`
