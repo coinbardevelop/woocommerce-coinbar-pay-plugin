@@ -24,16 +24,16 @@ With Coinbar Pay, merchants can expand their payment options and attract a wider
 
 = CoinbarPay Service activation =
 
-1. Visit the Coinbar website and click on the "Business" button to register as a business account.
+1. Visit the Coinbar website and click on the "Register" button to register as a new account.
 2. Fill in the registration form with your business information and create a password for your account.
 3. Verify your email address by clicking on the link sent to your email.
-4. Once logged in, navigate to the "KYC Verification" section and upload the necessary documents for verification (Company registration, ID, etc).
-5. Wait for the verification process to be completed. It can take up to a few days depending on the verification load.
-6. Once your account is verified, navigate to the "Services" section and activate the Coinbar Pay service.
-7. Obtain your API key and secret key by navigating to the "API" section and generate it.
+4. Once logged in, navigate to the "KYC Verification" section, choice business account type and upload the necessary documents for verification (Company registration, ID, etc).
+5. Wait for the verification process to be completed. It can take few minutes or may take up to 24h depending on the verification load.
+6. Once your account is verified, navigate to the "Business Panel" section and activate the Coinbar Pay service.
+7. Obtain your API key and secret key in Coinbar Pay Service panel.
 8. Use the obtained keys in the Coinbar Pay plugin settings to complete the integration.
 
-= Plugin Install =
+= Plugin Install & Configuration =
 
 1. Install the plugin through the WordPress plugin directory or by uploading the files to your server.
 2. Activate the plugin through the "Plugins" menu in WordPress.
@@ -46,11 +46,12 @@ With Coinbar Pay, merchants can expand their payment options and attract a wider
 = Available Payment Methods =
 The CoinbarPay Payment Gateway plugin allows for both on-chain and off-chain types of payments. This means that users have the option to use their private wallet or the Coinbar wallet for transactions.
 The Coinbar wallet is an account on the Coinbar Exchange Platform that allows users to hold, trade, deposit, withdraw, and pay with their preferred coin.
-When using a private wallet, after the checkout process, the user is prompted to confirm the final payment price, choose a cryptocurrency to pay with, and confirm the payment request. This generates a QR code for the user to scan and use their private wallet as the payment source.
-When using the Coinbar Wallet, the user will need to log in to the system and use funds that have been previously deposited.
+* When using a private wallet, after the checkout process, the user is prompted to confirm the final payment price, choose a cryptocurrency to pay with, and confirm the payment request. This generates a QR code for the user to scan and use their private wallet as the payment source.
+* When using the Coinbar Wallet, the user will need to log in to the system and use funds that have been previously deposited.
+
 
 = Available Countries =
-Service can be applied to the following services :
+CoinbarPay is available for Store Owners and Merchants in :
 * Austria
 * Belgium
 * Bulgaria
