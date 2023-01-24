@@ -1,0 +1,13 @@
+# No IDEs please...
+.idea/
+.vscode/
+/*.iml
+
+.phpunit.result.cache
+/vendor/
+
+doc/.~lock*
+doc/~*
+
+.env
+composer.phar
