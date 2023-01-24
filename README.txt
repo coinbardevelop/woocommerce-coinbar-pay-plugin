@@ -87,13 +87,27 @@ For more informations about the service fees and available promotions check out 
 == Dependencies ==
 
 This plugin uses some dependencies as :
- * Adamantic cypto payment library
- * Coinbar Pay PHP Plugins SDK
- * Brick Math
- * Graham-Campbell result-type
- * Phpoption
- * Symfony
- * Vlucas phpdotenv
+* Adamantic Crypto Payments PHP SDK (MIT License):
+    Convenience library that defines key roles for the integration of
+    crypto payment gateways in PHP applications.
+* Coinbar Pay PHP Plugin SDK (LGPL3 license):
+    Pure PHP implementation of the integration with Coinbar Pay (can be
+    used as-is in PHP back-ends, or as a base for e-commerce plug-ins).
+* Brick\Math (MIT License):
+    A PHP library to work with arbitrary precision numbers.
+* PHP Dotenv - vlucas (BSD License):
+    Library to automatically fetch specific configuration files (.env)
+ and to map them to environment variables.
+* PHPOption (Apache 2.0 License):
+    Implementation of the "Option" type (a type that can hold
+ a value or nothing, and act consequently) for PHP.
+* Result-Type - GrahamCampbell (BSD License):
+    Implementation of the "Result" type (a type that can hold both a
+ result code - OK/KO/... - and a return value) for PHP.
+* Symfony Polyfills for ctype, mbstring, php80 (MIT License):
+    These library provide fall-back PHP implementations of features that
+    are essential for the proper functioning of the software when they are
+    not available in the user's environment.
 
 == Development Credits==
 
