@@ -1,1 +1,0 @@
-# CryptoPayments PHP SDK
