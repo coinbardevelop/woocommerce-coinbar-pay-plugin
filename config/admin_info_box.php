@@ -28,7 +28,7 @@
         <div>    
             <h1>How to activate <b>Coinbar</b><span style="color:lightblue">Pay</span></h1>
                 <ol>
-                    <li>Sign up to <a target='_blank' href="https://trade.coinbar.io/signup/">Coinbar website</a> by filling out the required information and creating an account.</li>
+                    <li>Sign up to <a target='_blank' href="https://pay.coinbar.io/sign-up/">Coinbar website</a> by filling out the required information and creating an account.</li>
                     <li>Apply for Know Your Customer (KYC) verification as Business Account. This is a standard process for businesses that handle financial transactions and is used to ensure compliance with regulations and prevent fraud.</li>
                     <li>Once your account is activated, log in to the Coinbar business panel and activate CoinbarPay by clicking on the appropriate button or link.</li>
                     <li>Set up the configuration by following the instructions provided on the activation panel. This will include setting up service keys and preferences.</li>
