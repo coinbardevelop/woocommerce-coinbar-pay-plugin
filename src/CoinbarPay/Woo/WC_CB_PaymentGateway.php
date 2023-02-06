@@ -158,7 +158,9 @@ class WC_CB_PaymentGateway extends WC_Payment_Gateway
             return true;
         }
 
-        $textbox_value = (isset($_POST['other_payment-admin-note'])) ? trim($_POST['other_payment-admin-note']) : '';
+        $textbox_value = (isset($_POST['other_payment-admin-note']))
+            ? sanitize_text_field(trim($_POST['other_payment-admin-note']))
+            : '';
         if ($textbox_value === '') {
             wc_add_notice(__('Please, complete the payment information.', 'woocommerce-coinbar-pay'), 'error');
             return false;
@@ -223,7 +225,7 @@ class WC_CB_PaymentGateway extends WC_Payment_Gateway
 
 
     public function webhook() {
-        $scId = $_SERVER['HTTP_SERVICE_CLIENT_ID'];
+        $scId = sanitize_text_field($_SERVER['HTTP_SERVICE_CLIENT_ID']);
         if (empty($scId) || $scId != $this->gatewayConfig->get(CoinbarPaymentGatewayConfig::CBPAY_SERVICE_CLIENT_ID)) {
             dieWithStatusAndPayload(400, 'Service Client ID does not match the configured value.', 'KO');
         }
@@ -275,7 +277,7 @@ class WC_CB_PaymentGateway extends WC_Payment_Gateway
     }
 
     function wh_debug_payload() {
-        $scId = $_SERVER['HTTP_SERVICE_CLIENT_ID'];
+        $scId = sanitize_text_field($_SERVER['HTTP_SERVICE_CLIENT_ID']);
         if (empty($scId) || $scId != $this->gatewayConfig->get(CoinbarPaymentGatewayConfig::CBPAY_SERVICE_CLIENT_ID)) {
             dieWithStatusAndPayload(400, 'Service Client ID does not match the configured value.', 'KO');
         }
@@ -293,8 +295,8 @@ class WC_CB_PaymentGateway extends WC_Payment_Gateway
     }
 
     function fe_callback() {
-        $payId  = $_GET['payment_id'];
-        $status = $_GET['status'];
+        $payId  = sanitize_text_field($_GET['payment_id']);
+        $status = sanitize_text_field($_GET['status']);
         try {
             $status = CoinbarPaymentStatusMapper::coinbarToSdk($status);
         } catch (\Throwable $t) {
@@ -321,25 +323,26 @@ class WC_CB_PaymentGateway extends WC_Payment_Gateway
 
                 <div>
                     <div>
-                        <img src="<?=$this->get_option('result_page_logo')?>" class="cb-logo"/>
+                        <img src="<?php echo($this->get_option('result_page_logo')) ?>" class="cb-logo"/>
                     </div>
 
                     <?php if ($status === PaymentStatus::COMPLETED) { ?>
-                        <h3><?=__('Payment complete!', 'woocommerce-coinbar-pay')?></h3>
-	                    <?= __('Your payment is recorded, thank you!', 'woocommerce-coinbar-pay')?>
+                        <h3><?php echo(__('Payment complete!', 'woocommerce-coinbar-pay')) ?></h3>
+	                    <?php echo( __('Your payment is recorded, thank you!', 'woocommerce-coinbar-pay')) ?>
                     <?php } else { ?>
-                        <h3><?=__('Payment problem', 'woocommerce-coinbar-pay')?></h3>
-	                    <?= __('Something went wrong while processing your payment - status:', 'woocommerce-coinbar-pay')?>
-                        <?= $status ?? __('UNKNOWN', 'woocommerce-coinbar-pay') ?>
+                        <h3><?php echo(__('Payment problem', 'woocommerce-coinbar-pay')) ?></h3>
+	                    <?php echo( __('Something went wrong while processing your payment - status:', 'woocommerce-coinbar-pay')) ?>
+                        <?php echo( esc_html($status) ?? __('UNKNOWN', 'woocommerce-coinbar-pay') ) ?>
                     <?php }
 
                     if ($payId) { ?>
-                        <div><?= __('Your Payment ID:', 'woocommerce-coinbar-pay')?> <?= $payId ?></div>
+                        <div><?php echo(__('Your Payment ID:', 'woocommerce-coinbar-pay')) ?>
+                            <?php echo(esc_html($payId)) ?></div>
                     <?php }
                     ?>
                     <div>
-                        <a href="<?= get_permalink( wc_get_page_id( 'shop' ) ) ?>">
-                            <?= __('Return to the shop.', 'woocommerce-coinbar-pay')?>
+                        <a href="<?php echo( get_permalink( wc_get_page_id( 'shop' ) ) ) ?>">
+                            <?php echo( __('Return to the shop.', 'woocommerce-coinbar-pay')) ?>
                         </a>
                     </div>
                 </div>

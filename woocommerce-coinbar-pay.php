@@ -1,10 +1,10 @@
 <?php
 /*
- * Plugin Name: CoinbarPay Payment Gateway
- * Plugin URI: https://github.com/coinbardevelop/woocommerce-coinbar-pay-plugin
+ * Plugin Name: WooCommerce CoinbarPay Integration
+ * Plugin URI: https://github.com/adamantic-io/coinbar-pay-woocommerce-plg
  * Description: Pay with Cryptocurrencies using the CoinbarPay gateway
- * Author: Coinbar s.p.a., Adamantic Team
- * Author URI: https://www.coinbar.io
+ * Author: Adamantic Development Team
+ * Author URI: https://www.adamantic.io
  * Requires PHP: 7.4
  * Version: 1.0.0
  */
@@ -25,21 +25,21 @@
  */
 
 
-register_activation_hook(__FILE__, 'plugin_hook_activate');
-function plugin_hook_activate() {
+register_activation_hook(__FILE__, 'wccbp_plugin_hook_activate');
+function wccbp_plugin_hook_activate() {
     if (!class_exists('WooCommerce')) {
         die(__('Required plugin not found: WooCommerce'));
     }
 }
 
 
-add_filter('woocommerce_payment_gateways', 'add_cb_payment_gateway');
-function add_cb_payment_gateway( $gateways ){
+add_filter('woocommerce_payment_gateways', 'wccbp_add_payment_gateway');
+function wccbp_add_payment_gateway( $gateways ){
         $gateways[] = '\CoinbarPay\Woo\WC_CB_PaymentGateway';
         return $gateways;
 }
 
-add_action('plugins_loaded', 'init_cb_payment_gateway');
-function init_cb_payment_gateway(){
+add_action('plugins_loaded', 'wccbp_init_payment_gateway');
+function wccbp_init_payment_gateway(){
         require __DIR__ . '/vendor/autoload.php';
 }
