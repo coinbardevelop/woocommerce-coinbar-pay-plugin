@@ -45,46 +45,46 @@ class WC_CB_PaymentGatewayConfig extends CoinbarPaymentGatewayConfig {
 	public function getFormFieldDescriptors(): array {
 		return array(
 			self::CBPAY_GW_URL => array(
-				'title'       => __('Coinbar Pay Gateway URL', 'woocommerce-coinbar-pay'),
+				'title'       => __('Coinbar Pay Gateway URL', 'coinbarpay-payment-gateway'),
 				'type'        => 'text',
-				'description' => __('The URL to the Coinbar Pay Gateway', 'woocommerce-coinbar-pay'),
+				'description' => __('The URL to the Coinbar Pay Gateway', 'coinbarpay-payment-gateway'),
 				'default'     => $GLOBALS['CBPAY_GATEWAY_URL'],
 				'desc_tip'    => true,
 				'custom_attributes' => ($GLOBALS['CBPAY_GATEWAY_URL_READONLY'] ? array('readonly' => NULL) : NULL)
 			),
 			self::CBPAY_BACKEND_CALLBACK_URL => array(
-				'title'       => __('Back-end Callback URL <br/><i>(LEAVE AS SUGGESTED)</i>', 'woocommerce-coinbar-pay'),
+				'title'       => __('Back-end Callback URL <br/><i>(LEAVE AS SUGGESTED)</i>', 'coinbarpay-payment-gateway'),
 				'type'        => 'text',
-				'description' => __('The URL that will be called by the gateway to update the payment status. Only modify this if you know exactly what you are doing.', 'woocommerce-coinbar-pay'),
+				'description' => __('The URL that will be called by the gateway to update the payment status. Only modify this if you know exactly what you are doing.', 'coinbarpay-payment-gateway'),
 				'default'     => get_site_url() . '/wc-api/cbpay-webhook',
 				'desc_tip'    => true,
 			),
 			self::CBPAY_FRONTEND_CALLBACK_URL => array(
-				'title'       => __('Front-end Redirect URL <br/><i>(LEAVE AS SUGGESTED)</i>', 'woocommerce-coinbar-pay'),
+				'title'       => __('Front-end Redirect URL <br/><i>(LEAVE AS SUGGESTED)</i>', 'coinbarpay-payment-gateway'),
 				'type'        => 'text',
 				'description' => __('The front-end page onto which the gateway will redirect the user after completion.
-				Requires Permalinks to be enabled on this Wordpress installation.  Only modify this if you know exactly what you are doing.', 'woocommerce-coinbar-pay'),
+				Requires Permalinks to be enabled on this Wordpress installation.  Only modify this if you know exactly what you are doing.', 'coinbarpay-payment-gateway'),
 				'default'     => get_site_url() . '/wc-api/cbpay-fe-callback',
 				'desc_tip'    => true,
 			),
 			self::CBPAY_SERVICE_CLIENT_ID => array(
-				'title'       => __('Service Client ID', 'woocommerce-coinbar-pay'),
+				'title'       => __('Service Client ID', 'coinbarpay-payment-gateway'),
 				'type'        => 'text',
-				'description' => __('Your Coinbar Pay ID', 'woocommerce-coinbar-pay'),
+				'description' => __('Your Coinbar Pay ID', 'coinbarpay-payment-gateway'),
 				'default'     => '',
 				'desc_tip'    => true,
 			),
 			self::CBPAY_TOKEN_API_KEY => array(
-				'title'       => __('API Key', 'woocommerce-coinbar-pay'),
+				'title'       => __('API Key', 'coinbarpay-payment-gateway'),
 				'type'        => 'text',
-				'description' => __('Your Coinbar Pay API Key', 'woocommerce-coinbar-pay'),
+				'description' => __('Your Coinbar Pay API Key', 'coinbarpay-payment-gateway'),
 				'default'     => '',
 				'desc_tip'    => true,
 			),
 			self::CBPAY_TOKEN_SECRET_KEY => array(
-				'title'       => __('Secret Key', 'woocommerce-coinbar-pay'),
+				'title'       => __('Secret Key', 'coinbarpay-payment-gateway'),
 				'type'        => 'text',
-				'description' => __('Your Coinbar Pay Secret Key', 'woocommerce-coinbar-pay'),
+				'description' => __('Your Coinbar Pay Secret Key', 'coinbarpay-payment-gateway'),
 				'default'     => '',
 				'desc_tip'    => true,
 			),

@@ -43,7 +43,7 @@ class WC_CB_PaymentGateway extends WC_Payment_Gateway
     {
         $this->id = 'coinbarpay';
         $this->method_title = __('Coinbar Pay');
-        $this->title = __('Coinbar Pay', 'woocommerce-coinbar-pay');
+        $this->title = __('Coinbar Pay', 'coinbarpay-payment-gateway');
         $this->has_fields = true;
 	    $this->gatewayConfig = new WC_CB_PaymentGatewayConfig($this);
         $this->init_form_fields();
@@ -68,41 +68,41 @@ class WC_CB_PaymentGateway extends WC_Payment_Gateway
                 $this->gatewayConfig->getFormFieldDescriptors(),
                 array(
                     'title' => array(
-                        'title'                 => __('Method Title', 'woocommerce-coinbar-pay'),
+                        'title'                 => __('Method Title', 'coinbarpay-payment-gateway'),
                         'type'                  => 'text',
-                        'description'   => __('This controls the title', 'woocommerce-coinbar-pay'),
-                        'default'               => __('Coinbar Pay', 'woocommerce-coinbar-pay'),
+                        'description'   => __('This controls the title', 'coinbarpay-payment-gateway'),
+                        'default'               => __('Coinbar Pay', 'coinbarpay-payment-gateway'),
                         'desc_tip'              => true,
                     ),
                     'description' => array(
-                        'title' => __('Customer Message', 'woocommerce-coinbar-pay'),
+                        'title' => __('Customer Message', 'coinbarpay-payment-gateway'),
                         'type' => 'textarea',
                         'css' => 'width:500px;',
                         'default' => 'Pay safely with crypto via our partner Coinbar Pay',
-                        'description'   => __('The message you want to show to the customer in the checkout page.', 'woocommerce-coinbar-pay'),
+                        'description'   => __('The message you want to show to the customer in the checkout page.', 'coinbarpay-payment-gateway'),
                     ),
                     'text_box_required' => array(
-                        'title'                 => __('Make the Text Box required', 'woocommerce-coinbar-pay'),
+                        'title'                 => __('Make the Text Box required', 'coinbarpay-payment-gateway'),
                         'type'                  => 'checkbox',
-                        'label'                 => __('Make the text field required', 'woocommerce-coinbar-pay'),
+                        'label'                 => __('Make the text field required', 'coinbarpay-payment-gateway'),
                         'default'               => 'no'
                     ),
                     'hide_text_box' => array(
-                        'title'                 => __('Hide The Text Box', 'woocommerce-coinbar-pay'),
+                        'title'                 => __('Hide The Text Box', 'coinbarpay-payment-gateway'),
                         'type'                  => 'checkbox',
-                        'label'                 => __('Hide', 'woocommerce-coinbar-pay'),
+                        'label'                 => __('Hide', 'coinbarpay-payment-gateway'),
                         'default'               => 'no',
-                        'description'   => __('If you do not need to show the text box for customers at all, enable this option.', 'woocommerce-coinbar-pay'),
+                        'description'   => __('If you do not need to show the text box for customers at all, enable this option.', 'coinbarpay-payment-gateway'),
                     ),
                     'order_status' => array(
-                        'title' => __('Order Status After The Checkout', 'woocommerce-coinbar-pay'),
+                        'title' => __('Order Status After The Checkout', 'coinbarpay-payment-gateway'),
                         'type' => 'select',
                         'options' => wc_get_order_statuses(),
                         'default' => 'wc-on-hold',
-                        'description'   => __('The default order status after checkout if this gateway is used.', 'woocommerce-coinbar-pay'),
+                        'description'   => __('The default order status after checkout if this gateway is used.', 'coinbarpay-payment-gateway'),
                     ),
                     'result_page_logo' => array(
-                        'title'       => __('Result Page Logo', 'woocommerce-coinbar-pay'),
+                        'title'       => __('Result Page Logo', 'coinbarpay-payment-gateway'),
                         'type'        => 'text',
                         'description' => __('The Logo to display on the result page after the payment'),
                         'default'     => 'https://coinbar.io/static/media/logo-coinbar-hor.f21a28f5c91c26c050be7456c3fc6cb2.svg',
@@ -121,7 +121,7 @@ class WC_CB_PaymentGateway extends WC_Payment_Gateway
     public function admin_options()
     {
 ?>
-        <h3><?php _e('Coinbar Pay Settings', 'woocommerce-coinbar-pay'); ?></h3>
+        <h3><?php _e('Coinbar Pay Settings', 'coinbarpay-payment-gateway'); ?></h3>
         <div id="poststuff">
 
         <?php @include(__DIR__ . '/../../../config/admin_info_box.php'); ?>
@@ -162,7 +162,7 @@ class WC_CB_PaymentGateway extends WC_Payment_Gateway
             ? sanitize_text_field(trim($_POST['other_payment-admin-note']))
             : '';
         if ($textbox_value === '') {
-            wc_add_notice(__('Please, complete the payment information.', 'woocommerce-coinbar-pay'), 'error');
+            wc_add_notice(__('Please, complete the payment information.', 'coinbarpay-payment-gateway'), 'error');
             return false;
         }
         return true;
@@ -173,7 +173,7 @@ class WC_CB_PaymentGateway extends WC_Payment_Gateway
         global $woocommerce;
         $order = new WC_Order($order_id);
         // Mark as on-hold (we're awaiting the payment completion)
-        $order->update_status($this->order_status, __('Awaiting payment', 'woocommerce-coinbar-pay'));
+        $order->update_status($this->order_status, __('Awaiting payment', 'coinbarpay-payment-gateway'));
         // // Reduce stock levels
         // wc_reduce_stock_levels($order_id);
         // if (isset($_POST[$this->id . '-admin-note']) && trim($_POST[$this->id . '-admin-note']) != '') {
@@ -327,22 +327,22 @@ class WC_CB_PaymentGateway extends WC_Payment_Gateway
                     </div>
 
                     <?php if ($status === PaymentStatus::COMPLETED) { ?>
-                        <h3><?php echo(__('Payment complete!', 'woocommerce-coinbar-pay')) ?></h3>
-	                    <?php echo( __('Your payment is recorded, thank you!', 'woocommerce-coinbar-pay')) ?>
+                        <h3><?php echo(__('Payment complete!', 'coinbarpay-payment-gateway')) ?></h3>
+	                    <?php echo( __('Your payment is recorded, thank you!', 'coinbarpay-payment-gateway')) ?>
                     <?php } else { ?>
-                        <h3><?php echo(__('Payment problem', 'woocommerce-coinbar-pay')) ?></h3>
-	                    <?php echo( __('Something went wrong while processing your payment - status:', 'woocommerce-coinbar-pay')) ?>
-                        <?php echo( esc_html($status) ?? __('UNKNOWN', 'woocommerce-coinbar-pay') ) ?>
+                        <h3><?php echo(__('Payment problem', 'coinbarpay-payment-gateway')) ?></h3>
+	                    <?php echo( __('Something went wrong while processing your payment - status:', 'coinbarpay-payment-gateway')) ?>
+                        <?php echo( esc_html($status) ?? __('UNKNOWN', 'coinbarpay-payment-gateway') ) ?>
                     <?php }
 
                     if ($payId) { ?>
-                        <div><?php echo(__('Your Payment ID:', 'woocommerce-coinbar-pay')) ?>
+                        <div><?php echo(__('Your Payment ID:', 'coinbarpay-payment-gateway')) ?>
                             <?php echo(esc_html($payId)) ?></div>
                     <?php }
                     ?>
                     <div>
                         <a href="<?php echo( get_permalink( wc_get_page_id( 'shop' ) ) ) ?>">
-                            <?php echo( __('Return to the shop.', 'woocommerce-coinbar-pay')) ?>
+                            <?php echo( __('Return to the shop.', 'coinbarpay-payment-gateway')) ?>
                         </a>
                     </div>
                 </div>

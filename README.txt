@@ -1,5 +1,5 @@
 === CoinbarPay Payment Gateway ===
-Plugin name : woocommerce-coinbar-pay
+Plugin name : coinbarpay-payment-gateway
 Donate link: https://coinbar.io/
 Contributors: coinbarspa
 Tags: Payment Gateway, Woocommerce, Payment method, Crypto Payments, Crypto-Fiat Payments
@@ -118,7 +118,7 @@ https://github.com/adamantic-io
 
 * Coinbar Pay homepage : https://pay.coinbar.io
 * For more informations about Coinbar company, please go https://coinbar.io
-* Plugins source : https://github.com/coinbardevelop/woocommerce-coinbar-pay-plugin
+* Plugins source : https://github.com/coinbardevelop/coinbarpay-payment-gateway-plugin
 * Developers Team : https://github.com/adamantic-io
 * Detailed documentation is avaialble in github plugin source or requesting support at business@coinbar.io
 
