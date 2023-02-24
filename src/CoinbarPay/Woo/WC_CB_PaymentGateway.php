@@ -195,13 +195,12 @@ class WC_CB_PaymentGateway extends WC_Payment_Gateway
 
     public function payment_fields()
     {
-        $escapedId = esc_attr($this->id);
     ?>
         <fieldset>
             <p class="form-row form-row-wide">
-                <label for="<?php echo $escapedId; ?>-admin-note"><?php echo esc_html($this->description); ?> <?php if ($this->text_box_required === 'yes') : ?> <span class="required">*</span> <?php endif; ?></label>
+                <label for="<?php echo esc_attr($this->id); ?>-admin-note"><?php echo esc_html($this->description); ?> <?php if ($this->text_box_required === 'yes') : ?> <span class="required">*</span> <?php endif; ?></label>
                 <?php if ($this->hide_text_box !== 'yes') { ?>
-                    <textarea id="<?php echo $escapedId; ?>-admin-note" class="input-text" type="text" name="<?php echo $escapedId; ?>-admin-note"></textarea>
+                    <textarea id="<?php echo esc_attr($this->id); ?>-admin-note" class="input-text" type="text" name="<?php echo esc_attr($this->id); ?>-admin-note"></textarea>
                 <?php } ?>
             </p>
             <div class="clear"></div>
